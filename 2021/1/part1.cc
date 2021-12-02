@@ -2,7 +2,7 @@
 #include <iostream>
 
 int main() {
-  std::ifstream inf("input.txt");
+  std::ifstream inf("2021/1/input.txt");
 
   bool isfirst = true;
   int count = 0;

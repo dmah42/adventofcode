@@ -3,7 +3,7 @@
 #include <vector>
 
 int main() {
-  std::ifstream inf("input.txt");
+  std::ifstream inf("2021/1/input.txt");
 
   std::vector<int> depths;
 
