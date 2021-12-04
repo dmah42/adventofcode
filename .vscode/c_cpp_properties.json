@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/bazel-adventofcode/external/*"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "intelliSenseMode": "macos-clang-arm64",
+            "compilerArgs": [
+                "--std=c++17"
+            ]
+        }
+    ],
+    "version": 4
+}

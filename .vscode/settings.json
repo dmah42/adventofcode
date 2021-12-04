@@ -1,0 +1,5 @@
+{
+    "C_Cpp.default.includePath": [
+        "./bazel-adventofcode/external/com_google_absl"
+    ]
+}

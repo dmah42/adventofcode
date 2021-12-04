@@ -2,7 +2,7 @@
     cc_binary(
         name = n,
         srcs = [n + ".cc"],
-        data = [":input.txt"],
+        data = [":input.txt", ":test.txt"],
         copts = ["--std=c++17"],
     )
 
