@@ -28,5 +28,5 @@ cc_test(
         ],
     )
 
-    for n in ["part1", "part2"]
+    for n in ["main"]
 ]

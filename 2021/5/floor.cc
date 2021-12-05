@@ -31,10 +31,13 @@ void Floor::DrawLine(XY start, XY end) {
       .y = start.y < end.y ? 1 : (start.y > end.y ? -1 : 0),
   };
 
-  if (delta.x != 0 && delta.y != 0) {
-    std::cout << "diagonal line.. skipping (part1)\n";
-    return;
-  }
+  // Uncomment this for part 1
+  /*
+if (delta.x != 0 && delta.y != 0) {
+  std::cout << "diagonal line.. skipping (part1)\n";
+  return;
+}
+*/
 
   while (start != end) {
     _floor[start.y][start.x] += 1;
