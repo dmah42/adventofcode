@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 
+#include "2021/input.h"
 #include "lib.h"
 
 int main() {

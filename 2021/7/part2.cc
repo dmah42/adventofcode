@@ -3,7 +3,8 @@
 #include <unordered_map>
 #include <vector>
 
-#include "lib.h"
+#include "2021/7/lib.h"
+#include "2021/input.h"
 
 int triangular(int n) { return n * (n + 1) / 2; }
 

@@ -26,10 +26,13 @@ cc_test(
         data = [":input.txt"],
         deps = [
             ":board",
+            "//2021:input",
             "@com_google_absl//absl/base",
             "@com_google_absl//absl/strings",
         ],
     )
-
-    for n in ["part1", "part2"]
+    for n in [
+        "part1",
+        "part2",
+    ]
 ]

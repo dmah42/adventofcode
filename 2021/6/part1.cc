@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 
+#include "2021/input.h"
 #include "absl/base/macros.h"
 #include "absl/strings/numbers.h"
 #include "absl/strings/str_split.h"
@@ -12,18 +13,11 @@ constexpr int GENERATIONS = 80;
 }  // namespace
 
 int main() {
-  std::ifstream inf("2021/6/input.txt");
-  std::string line;
-  inf >> line;
-  const std::vector<std::string> strs = absl::StrSplit(line, ',');
+  const std::vector<int> fish_in = read_ints("2021/6/input.txt");
   std::vector<int64_t> fish;
-  std::transform(strs.cbegin(), strs.cend(), std::back_inserter(fish),
-                 [](const std::string& s) {
-                   int v = 0;
-                   ABSL_ASSERT(absl::SimpleAtoi(s, &v));
-                   return v;
-                 });
-  // std::vector<int> fish = {3, 4, 3, 1, 2};
+  std::transform(fish_in.cbegin(), fish_in.cend(), std::back_inserter(fish),
+                 [](const int i) { return int64_t{i}; });
+  // std::vector<int64_t> fish = {3, 4, 3, 1, 2};
 
   std::cout << "gen\tnum_fish\n";
   for (int gen = 0; gen < GENERATIONS; ++gen) {

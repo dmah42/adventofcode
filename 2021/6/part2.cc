@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <vector>
 
+#include "2021/input.h"
 #include "absl/base/macros.h"
 #include "absl/strings/numbers.h"
 #include "absl/strings/str_split.h"
@@ -12,18 +13,7 @@ namespace {
 constexpr int GENERATIONS = 256;
 
 void run(const std::string& file) {
-  std::cout << file << '\n';
-  std::ifstream inf(file);
-  std::string line;
-  inf >> line;
-  const std::vector<std::string> strs = absl::StrSplit(line, ',');
-  std::vector<int> timers;
-  std::transform(strs.cbegin(), strs.cend(), std::back_inserter(timers),
-                 [](const std::string& s) {
-                   int timer = 0;
-                   ABSL_ASSERT(absl::SimpleAtoi(s, &timer));
-                   return timer;
-                 });
+  const std::vector<int> timers = read_ints(file);
 
   // maps from timer to population at that timer.
   auto fish = std::unordered_map<int, uint64_t>{
